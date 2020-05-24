@@ -1,0 +1,115 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	body{
+		margin: 0%;
+	}
+	#head{
+		width: 20%;
+	}
+	.opt{
+		padding: 2%;
+	}
+	#image, #yimage{
+		width: 25%;
+	}
+	</style>
+</head>
+<body>
+	 <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#naav" aria-expanded="false">
+					...
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="naav">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">Home</a>
+					</li>	
+				</ul>
+			</div>	
+		</div>
+	</nav>
+	<div><img id="head" src="C:\Users\Guestuse\Desktop\head.png"></div>
+	<div class="col-md-6">
+		<div class="row">
+			<center>
+				<h1>Computer</h1><div><img id="image" src="C:\Users\Guestuse\Desktop\rock.png"></div><h1 id="cscore"></h1>
+			</center>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="row">
+			<center>
+				<h1>You</h1><div><img id="yimage" src="C:\Users\Guestuse\Desktop\rock.png"></div><h1 id="score"></h1>
+			</center>
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-md-4 opt"><center><button onclick="rock()"><img src="C:\Users\Guestuse\Desktop\rock.png"/></center></button></div>
+			<div class="col-xs-4 col-md-4 opt"><center><button onclick="paper()"><img src="C:\Users\Guestuse\Desktop\paper.png"/></center></button></div>
+			<div class="col-xs-4 col-md-4 opt"><center><button onclick="scissor()"><img src="C:\Users\Guestuse\Desktop\scissor.png"/></buttom></center></div>	
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var scores = 0;
+		var cscores = 0;
+		function rock() {
+			document.getElementById('yimage').src = "rock.png";
+			var selected = 0;
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==2){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+			else{
+				cscores+=1;
+				document.getElementById("cscore").innerHTML = cscores;
+			}	
+		}
+		function paper() {
+			var selected = 1;
+			document.getElementById('yimage').src = "paper.png";
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==0){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+			else{
+				cscores+=1;
+				document.getElementById("cscore").innerHTML = cscores;
+			}
+		}
+		function scissor() {
+			var selected = 2;
+			document.getElementById('yimage').src = "scissor.png";
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==1){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+			else{
+				cscores+=1;
+				document.getElementById("cscore").innerHTML = cscores;
+			}
+		}
+		function Computer(c) {
+			if(c==0)
+				document.getElementById('image').src = "rock.png";
+			else if(c==1)
+				document.getElementById('image').src = "paper.png";
+			else
+				document.getElementById('image').src = "scissor.png";
+		}
+	</script>
+</body>
+</html>
