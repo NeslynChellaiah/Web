@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Page</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<!-- <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#naav" aria-expanded="false">
+					...
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="naav">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">Home</a>
+					</li>	
+				</ul>
+			</div>	
+		</div>
+	</nav> -->
+	<div class="container">
+		<img src="C:\Users\Guestuse\Desktop\head.png" style="width:50%; margin-left: 23%;">
+		<center>
+			<h1>Computer plays</h1><img id="image" src="">
+		</center>
+		<div class="row">
+			<div class="col-xs-12 col-md-2"><center><button onclick="rock()"><img src="C:\Users\Guestuse\Desktop\rock.png"/></center></button></div>
+			<div class="col-xs-12 col-md-3"></div>
+			<div class="col-xs-12 col-md-2"><center><button onclick="paper()"><img src="C:\Users\Guestuse\Desktop\paper.png"/></center></button></div>
+			<div class="col-xs-12 col-md-3"></div>
+			<div class="col-xs-12 col-md-2"><center><button onclick="scissor()"><img src="C:\Users\Guestuse\Desktop\scissor.png"/></buttom></center></div>			
+		</div>
+		<center>
+			<h1>Score</h1>
+			<h1 id="score">_</h1>
+		</center>
+	</div>
+	<script type="text/javascript">
+		var scores = 0;
+		function rock() {
+			var selected = 0;
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==2){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+		}
+		function paper() {
+			var selected = 1;
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==0){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+		}
+		function scissor() {
+			var selected = 2;
+			var c = Math.floor(Math.random()*3);
+			Computer(c);
+			if(c==1){
+				scores+=1;
+				document.getElementById("score").innerHTML = scores;
+			}
+		}
+		function Computer(c) {
+			if(c==0)
+				document.getElementById('image').src = "rock.png";
+			else if(c==1)
+				document.getElementById('image').src = "paper.png";
+			else
+				document.getElementById('image').src = "scissor.png";
+		}
+	</script>
+</body>
+</html>
