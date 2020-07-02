@@ -1,0 +1,57 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+.d7 {
+  background-color: coral;
+}
+
+.d8 {
+  background-color: coral;
+}
+
+.d9 {
+  background-color: coral;
+}
+
+.d4 {
+  background-color: cornflowerblue;
+}
+
+.d5 {
+  background-color: cornflowerblue;
+}
+
+.d6 {
+  background-color: cornflowerblue;
+}
+
+.d2 {
+  background-color: greenyellow;
+}
+
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 1;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
