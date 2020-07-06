@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    color: white;
+}
+
+form {
+    margin-top: 10%;
+}
+
+.header {
+    background-color: rgb(255, 0, 0);
+}
+
+.heading {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.location {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    display: inline-block;
+    font-family: FontAwesome;
+    width: 25%;
+}
+
+.content-box {
+    background-color: rgb(255, 144, 110);
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+.content-row {
+    padding: 3% 0%;
+}
+
+.content-details {
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .location {
+        width: 40%;
+    }
+  }

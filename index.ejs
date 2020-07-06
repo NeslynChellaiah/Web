@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Weather</title>
+</head>
+<body>
+    <div class="header">
+        <h3 class="heading">Weather</h3>
+    </div>
+    <form action="/" method="post">
+        <div class="container">
+            <input type="text" class="form-control location" name="query" placeholder="&#xf041; Search">
+            <button type="submit" class="btn submit">Submit</button>
+        </div>
+    </form>
+    <% if (place != ""){ %>
+    <div class="container col-6 col-md-4 content-box">
+        <div class="row content-row">
+            <div class="col-md-6">
+                <img src=<%= link %>>
+            </div>
+            <div class="col-md-6 content-details">
+                <h4> <%= place %></h4>
+                <h4><%= temperature + "°C" %></h4>
+                <h4><%= description %></h4>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</body>
+</html>
+
