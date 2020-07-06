@@ -15,10 +15,14 @@ var description = "";
 
 app.get('/', function(req, res){
     res.render('index', {place: city, temperature: temp, link: link, description:description}); 
+    city = "";
+    temp = "";
+    link = "";
+    description = "";
 });
 
 app.post('/', function(req, res){
-    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ req.body.query +'&units=metric&appid=[apikey]';
+    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ req.body.query +'&units=metric&appid=b2e813eff26386e19814f73e4f1b7d3a';
     https.get(url, function(response){
         console.log(response.statusCode);
         response.on('data', function(data){
@@ -32,6 +36,7 @@ app.post('/', function(req, res){
                 description = map.weather[0].description;
                 link = "http://openweathermap.org/img/wn/"+ map.weather[0].icon +"@2x.png";
                 res.redirect('/');
+                
             }
         });
     });
