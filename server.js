@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ req.body.query +'&units=metric&appid=b2e813eff26386e19814f73e4f1b7d3a';
+    url = 'https://api.openweathermap.org/data/2.5/weather?q='+ req.body.query +'&units=metric&appid=[apikey]';
     https.get(url, function(response){
         console.log(response.statusCode);
         response.on('data', function(data){
